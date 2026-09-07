@@ -1,8 +1,6 @@
 // API Reference: https://www.wix.com/velo/reference/api-overview/introduction
 // “Hello, World!” Example: https://learn-code.wix.com/en/article/hello-world
-
-$w.onReady(function () {
-    import wixData from 'wix-data';
+import wixData from 'wix-data';
 
 $w.onReady(async function () {
   const [seiteRes, eventsRes] = await Promise.all([
@@ -16,9 +14,9 @@ $w.onReady(async function () {
     return;
   }
 
+  // Zuweisung der Daten
   $w('#dorisHome1').data = {
     ...seite,
     events: eventsRes.items
   };
-});
 });

@@ -1233,9 +1233,9 @@ p {
 }
 
 /* ============================================
-   EVENTS / RETREATS
+   Import4 / RETREATS
    ============================================ */
-.events-grid {
+.Import4-grid {
   display: grid;
   grid-template-columns: 1fr;
   gap: var(--space-lg);
@@ -1449,7 +1449,7 @@ p {
     grid-template-columns: repeat(2, 1fr);
   }
   
-  .events-grid {
+  .Import4-grid {
     grid-template-columns: repeat(2, 1fr);
   }
   
@@ -1742,7 +1742,7 @@ class DorisHome extends HTMLElement {
 
       <section class="section bg-white-soft">
         <div class="container">
-          <div id="events-grid" class="events-grid"></div>
+          <div id="Import4-grid" class="Import4-grid"></div>
         </div>
       </section>
 
@@ -1755,13 +1755,13 @@ class DorisHome extends HTMLElement {
       </section>
     `;
 
-    if (d.events) this.renderEvents(d.events);
+    if (d.Import4) this.renderImport4(d.Import4);
   }
 
-  renderEvents(events) {
-    const grid = this.querySelector('#events-grid');
+  renderImport4(Import4) {
+    const grid = this.querySelector('#Import4-grid');
     if (!grid) return;
-    grid.innerHTML = events.map(e => `
+    grid.innerHTML = Import4.map(e => `
       <article class="event-card card-shine">
         <img src="${e.bild}" alt="${e.titel}" class="event-image">
         <div class="event-content">

@@ -85,7 +85,7 @@ const readline = require('readline');
 const assert = require('assert');
 const stream = require('stream');
 const zlib = require('zlib');
-const events = require('events');
+const Import4 = require('Import4');
 
 const _interopDefaultLegacy = e => e && typeof e === 'object' && 'default' in e ? e : { default: e };
 
@@ -1413,7 +1413,7 @@ function assertStatus(current, expected) {
     throw new Error(`Invalid StatWatcher status: expected '${expected}', got '${current}'`);
   }
 }
-class CustomStatWatcher extends events.EventEmitter {
+class CustomStatWatcher extends Import4.EventEmitter {
   constructor(fakeFs, path, { bigint = false } = {}) {
     super();
     this.status = "ready" /* Ready */;
